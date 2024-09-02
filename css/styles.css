@@ -16,7 +16,8 @@ html {
     /* Para que el border o el padding no afecte el ancho nuestros elementos */
     font-size: 62.5%;
     /* 1rem = 10px */
-    background-color: #000000e8;
+    background-color: rgba(0, 0, 0, 0.95);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 1));
 }
 
 *,
@@ -47,7 +48,7 @@ html {
 }
 
 h1,
-h2 {
+h2{
     font-family: var(--fuente_principal);
 }
 
@@ -96,26 +97,27 @@ li {
     line-height: 2rem;
 }
 
-header {
+header, footer {
     background-color: var(--dorado);
     text-align: center;
-    padding: 1px;
+    padding: 0;
     margin: 0;
 }
 
-img {
+.jm {
     width: 30rem;
     height: 40rem;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
     margin: 0 auto;
+    border: 5px solid --gris;
     /* box-shadow: 0 14px 18px rgba(69, 65, 65, 0.4); */
 }
 
 @media (min-width: 1024px) {
-    img {
-        margin-left: 10rem;
+    .jm {
+        margin-left: 8rem;
     }
 }
 
@@ -128,6 +130,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2px;
     /* background-color: var(--dorado); */
 }
 
@@ -138,9 +141,10 @@ img {
 
 .iconos {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 1rem;
     width: 100%;
+    padding: 2rem 0;
 }
 
 .icon {
@@ -149,7 +153,13 @@ img {
     margin: 0 1px;
 }
 
-@media (max-width: 768px) {
+.icon:hover {
+    transition: transform .3s ease-in-out;
+    transform: scale(1.6);
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
     .icon {
         height: 5rem;
         width: 5rem;
@@ -162,8 +172,7 @@ img {
     padding: 3rem;
 }
 
-.principal h2,
-h3 {
+.principal h3 {
     color: var(--blanco);
     padding: 6px 0;
     word-break: keep-all;
@@ -232,13 +241,6 @@ h3 {
     }
 }
 
-/* @media (min-width: 1020px) {
-    .subconjuntos {
-        display: flex;
-        justify-content: center;
-    }
-} */
-
 .contenedor-base {
     margin: 0 auto;
     width: 70%;
@@ -250,11 +252,10 @@ h3 {
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.4);
 }
 
-.contenedor-base :hover {
+/* .contenedor-base :hover {
     transition: transform .3s ease-in-out;
     transform: scale(1.4);
-}
-
+} */
 
 .subtitulo {
     text-align: center;
@@ -263,7 +264,14 @@ h3 {
 
 .dorado {
     background-color: var(--dorado);
-    color: var(--blanco);
+    color: var(--negro);
+}
+
+@media (min-width: 768px) {
+    .name{
+        width: 50rem;
+        margin: 0 auto
+    }
 }
 
 .contenedor-base h2,
@@ -341,10 +349,26 @@ h3 {
     }
 }
 
+.blanco{
+    color: var(--blanco);
+}
+
 .border {
     border: 2px solid #e7aa00;
     border-radius: 1rem;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 8px rgba(234, 170, 21, 0.4);
+}
+
+.border:hover{
+    box-shadow: 0 0 30px rgba(234, 170, 21, 0.6), /* Brillo en el borde */
+                0 0 60px rgba(234, 170, 21, 0.4); /* Difuminado adicional */
+}
+
+.me h2{
+color: var(--negro);
+}
+.me h3{
+    padding: 2rem;
 }
