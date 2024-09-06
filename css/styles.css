@@ -272,6 +272,12 @@ footer {
 
 .yll{
     background-color: var(--dorado);
+}  
+
+.yll h3{
+    word-break: keep-all;
+    line-height: 2.2rem;
+    margin: 2rem 3rem;
 }
 
 .tit{
@@ -401,3 +407,11 @@ footer {
 .me h3 {
     padding: 2rem;
 }
+
+hr {
+    border: none; /* Elimina el borde predeterminado */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: #000; /* Cambia el color de la línea */
+    margin: 20px 0; /* Ajusta el espacio alrededor de la línea */
+}
+
